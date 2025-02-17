@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.ViewMealPlansActivity">
+
+    <!-- Meal Plan Image -->
+    <ImageView
+        android:id="@+id/imageBrowse"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/image_border"
+        app:srcCompat="@drawable/imageplaceholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Meal Type (Read-only) -->
+    <EditText
+        android:id="@+id/mealType"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:hint="Enter Meal Type"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/imageBrowse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Meal Name (Read-only) -->
+    <EditText
+        android:id="@+id/mealName"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:hint="Enter Meal Name"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mealType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Meal Proteins (Read-only) -->
+    <EditText
+        android:id="@+id/mealProtein"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:hint="Enter Meal Proteins"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mealName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Meal Calories (Read-only) -->
+    <EditText
+        android:id="@+id/mealCalories"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:hint="Enter Meal Calories"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mealProtein"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

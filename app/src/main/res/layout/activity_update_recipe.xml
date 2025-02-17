@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activity.UpdateRecipeActivity"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/updateImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:background="@drawable/image_border"
+        app:srcCompat="@drawable/imageplaceholder" />
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/updateRecipeName"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="10dp"
+
+        android:hint="Update Recipe Name"
+        android:inputType="text" />
+
+
+
+    <EditText
+        android:id="@+id/updateRecipeDesc"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="5dp"
+        android:hint="Update Recipe Description" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/updateRecipeIngredients"
+        android:hint="Enter Recipe Ingredients"
+        />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/updateRecipeSteps"
+        android:hint="Enter Recipe Steps"/>
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="Update Recipe" />
+
+
+
+</LinearLayout>

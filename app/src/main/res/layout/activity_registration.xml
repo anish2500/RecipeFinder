@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context=".ui.activity.RegistrationActivity">
+
+
+    <ImageView
+        android:id="@+id/registerImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:layout_marginTop="50dp"
+        android:contentDescription="Registration Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cookopedia" />
+
+
+    <EditText
+        android:id="@+id/registerFname"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/drawable_border"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/gray"
+        android:hint="Enter first name"
+        android:inputType="text"
+        android:textColorHint="@color/blue"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerImage" />
+
+    <!-- Last Name -->
+    <EditText
+        android:id="@+id/registerLName"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/blue"
+        android:background="@drawable/drawable_border"
+        android:ems="10"
+        android:hint="Enter last name"
+        android:inputType="text"
+        android:fontFamily="@font/poppins"
+
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerFname" />
+
+    <!-- Address -->
+    <EditText
+        android:id="@+id/registerAddress"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColorHint="@color/blue"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/drawable_border"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+
+        android:hint="Enter address"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerLName" />
+
+    <!-- Contact -->
+    <EditText
+        android:id="@+id/registerContact"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/poppins"
+        android:textColorHint="@color/blue"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/drawable_border"
+        android:ems="10"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerAddress" />
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+
+        android:background="@drawable/drawable_border"
+        android:textColorHint="@color/blue"
+        android:ems="10"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerContact" />
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/drawable_border"
+        android:ems="10"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/blue"
+        android:fontFamily="@font/poppins"
+
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerEmail" />
+
+    <!-- Sign-up Button -->
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/poppins"
+        android:text="Sign up"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerPassword" />
+
+    <!-- Login Text -->
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Already have an account? Login!"
+        android:fontFamily="@font/poppins"
+
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

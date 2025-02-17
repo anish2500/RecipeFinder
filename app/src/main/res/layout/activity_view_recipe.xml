@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Recipe Image (Read-only) -->
+    <ImageView
+        android:id="@+id/imageBrowse"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:src="@drawable/imageplaceholder"/>
+
+    <!-- Recipe Name (Read-only) -->
+    <EditText
+        android:id="@+id/recipeName"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:textColorHint="@color/darkgreen"
+        android:fontFamily="@font/poppins"
+        android:layout_marginBottom="10dp"
+        android:maxLines="1"
+        android:focusable="false"
+        android:clickable="false"
+        android:hint="Recipe Name"/>
+
+    <!-- Recipe Description (Read-only) -->
+    <EditText
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:textColorHint="@color/darkgreen"
+        android:fontFamily="@font/poppins"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/recipeDesc"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+
+        android:maxLines="3"
+        android:focusable="false"
+        android:clickable="false"
+        android:hint="Recipe Description"/>
+
+    <!-- Ingredients (Read-only) -->
+    <EditText
+        android:id="@+id/recipeIngredients"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:textColorHint="@color/darkgreen"
+        android:fontFamily="@font/poppins"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+
+        android:focusable="false"
+        android:clickable="false"
+        android:maxLines="4"
+
+        android:hint="Ingredients"/>
+
+    <!-- Steps (Read-only) -->
+    <EditText
+        android:id="@+id/recipeSteps"
+        android:textColor="@color/gray"
+        android:background="@drawable/drawable_border"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:textColorHint="@color/darkgreen"
+        android:fontFamily="@font/poppins"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+
+        android:focusable="false"
+        android:clickable="false"
+        android:maxLines="3"
+        android:hint="Steps"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageBrowse"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:background="@drawable/image_border"
+
+        app:srcCompat="@drawable/imageplaceholder" />
+
+
+    <EditText
+        android:id="@+id/recipeName"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:hint="Enter Recipe Name"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/drawable_border"
+        android:inputType="text" />
+
+
+
+    <EditText
+        android:textColor="@color/gray"
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:id="@+id/recipeDesc"
+        android:layout_width="300dp"
+
+        android:hint="Enter Recipe Description" />
+
+
+    <EditText
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+
+        android:id="@+id/recipeIngredients"
+        android:hint="Enter Ingredients"/>
+
+    <EditText
+        android:textColorHint="@color/darkgreen"
+        android:backgroundTint="@color/lightwhite"
+        android:background="@drawable/drawable_border"
+        android:fontFamily="@font/poppins"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:layout_width="300dp"
+
+
+        android:id="@+id/recipeSteps"
+        android:hint="Enter Steps"/>
+
+    <Button
+
+        android:id="@+id/addBtn"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:backgroundTint="@color/blue"
+        android:text="Add Recipe" />
+
+
+
+
+</LinearLayout>
