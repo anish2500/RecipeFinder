@@ -2,6 +2,7 @@ package com.example.recipefinder.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +31,7 @@ class MealPlansAdapter(
   val mealType: TextView = itemView.findViewById(R.id.mealType)
   val mealName : TextView = itemView.findViewById(R.id.mealName)
   val edit: TextView = itemView.findViewById(R.id.updateMealPlan)
-  val mealImage: ImageView = itemView.findViewById(R.id.mealImage)
+  val mImage: ImageView = itemView.findViewById(R.id.mealImage)
  }
 
  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealPlanViewHolder {
@@ -49,12 +50,13 @@ class MealPlansAdapter(
 
   holder.mealName.text = data[position].mealName
 
+  val httpsUrl = convertToHttps(mealplan.mealimageUrl)
 
   Glide.with(holder.itemView.context)
-   .load(mealplan.mealimageUrl)
-   .placeholder(R.drawable.imageplaceholder)
+   .load(httpsUrl)
+   .placeholder(R.drawable.images)
    .error(R.drawable.imageplaceholder)
-   .into(holder.mealImage)
+   .into(holder.mImage)
 
   holder.itemView.setOnClickListener {
    if (mealplan.mealPlanId.isNullOrEmpty()) {
@@ -78,6 +80,10 @@ class MealPlansAdapter(
   data.clear()
   data.addAll(newMealPlans)
   notifyDataSetChanged()
+ }
+ fun convertToHttps(url: String): String {
+  val parts = url.split("://") // Splitting at "://"
+  return "https://${parts[1]}" // Replacing "http" with "https"
  }
 
  // Get Meal Plan ID for a specific position

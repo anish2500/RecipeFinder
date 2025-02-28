@@ -124,10 +124,10 @@ class MealPlansRepositoryImpl : MealPlansRepository {
                         "resource_type", "image"
                     )
                 )
-                var imageUrl = response["url"] as String?
-                imageUrl = imageUrl?.replace("http.//", "https://")
+                var mealImageUrl = response["url"] as String?
+                mealImageUrl = mealImageUrl?.replace("http.//", "https://")
                 Handler(Looper.getMainLooper()).post {
-                    callback(imageUrl)
+                    callback(mealImageUrl)
                 }
             } catch (e: Exception) {
                 e.printStackTrace()

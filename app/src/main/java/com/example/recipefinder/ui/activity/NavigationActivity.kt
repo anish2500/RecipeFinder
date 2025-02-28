@@ -11,10 +11,9 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.recipefinder.R
 import com.example.recipefinder.databinding.ActivityNavigationBinding
 import com.example.recipefinder.ui.fragment.AddFragment
-import com.example.recipefinder.ui.fragment.FavoritesFragment
 import com.example.recipefinder.ui.fragment.HomeFragment
 import com.example.recipefinder.ui.fragment.MealPlansFragment
-import com.example.recipefinder.ui.fragment.SearchFragment
+import com.example.recipefinder.ui.fragment.ProfileFragment
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var binding: ActivityNavigationBinding
@@ -43,6 +42,7 @@ class NavigationActivity : AppCompatActivity() {
                 R.id.add -> replaceFragment(AddFragment())
 
                 R.id.mealPlans -> replaceFragment(MealPlansFragment())
+                R.id.profile -> replaceFragment(ProfileFragment())
 
                 else ->{
 

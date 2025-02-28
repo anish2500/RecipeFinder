@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7E7E7E"
+    android:background="@color/white"
     tools:context=".ui.fragment.MealPlansFragment">
 
     <!-- Search Bar -->
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:backgroundTint="#595959"
+        android:backgroundTint="#D3D0D0"
         android:background="@drawable/drawable_border"
         android:hint="Search Meal Plans...." />
 

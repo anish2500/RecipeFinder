@@ -26,16 +26,16 @@ class MealPlansViewModel(val repo: MealPlansRepository) {
     }
 
     // LiveData to hold the current meal plan
-    private var _mealPlans  = MutableLiveData<MealPlansModel>()
+     var _mealPlans  = MutableLiveData<MealPlansModel>()
     var mealPlans = MutableLiveData<MealPlansModel>()
         get() = _mealPlans
 
     // LiveData to hold all meal plans
-    private var _allMealPlans = MutableLiveData<List<MealPlansModel>>()
+     var _allMealPlans = MutableLiveData<List<MealPlansModel>>()
     var allMealPlans: LiveData<List<MealPlansModel>> = _allMealPlans
 
     // LiveData for loading state
-    private var _loading = MutableLiveData<Boolean>()
+     var _loading = MutableLiveData<Boolean>()
     var loading: LiveData<Boolean> = _loading
 
     // Function to get meal plan by its ID

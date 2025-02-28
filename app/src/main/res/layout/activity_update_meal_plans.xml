@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
+    android:gravity="center"
     android:background="#FFFFFF"
-    android:padding="50dp"
-    android:paddingStart="50dp"
+
 
     tools:context=".ui.activity.UpdateMealPlansActivity">
 
+    <!-- ImageView for displaying the meal image -->
     <ImageView
         android:id="@+id/updateMealImage"
         android:layout_width="300dp"
@@ -21,12 +21,11 @@
         android:scaleType="centerCrop"
         android:background="@drawable/image_border"
         app:srcCompat="@drawable/imageplaceholder"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/darkgreen"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="40dp"/>
 
+    <!-- EditText for Meal Type -->
     <EditText
         android:id="@+id/updateMealType"
         android:layout_width="300dp"
@@ -39,11 +38,9 @@
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imageBrowse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"/>
 
+    <!-- EditText for Meal Name -->
     <EditText
         android:id="@+id/updateMealName"
         android:layout_width="300dp"
@@ -55,11 +52,9 @@
         android:fontFamily="@font/poppins"
         android:paddingStart="20dp"
         android:paddingTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/mealType"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"/>
 
+    <!-- EditText for Protein -->
     <EditText
         android:id="@+id/updateMealProtein"
         android:layout_width="300dp"
@@ -70,11 +65,10 @@
         android:fontFamily="@font/poppins"
         android:paddingStart="20dp"
         android:paddingTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/mealName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         android:layout_marginTop="10dp"/>
 
+    <!-- EditText for Calories -->
     <EditText
         android:id="@+id/updateMealCalories"
         android:layout_width="300dp"
@@ -85,26 +79,22 @@
         android:fontFamily="@font/poppins"
         android:paddingStart="20dp"
         android:paddingTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/mealProtein"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         android:layout_marginTop="10dp"/>
 
+    <!-- Button to update meal plan -->
     <Button
         android:id="@+id/updateMealBtn"
-        android:layout_width="200dp"
+        android:layout_width="210dp"
         android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="36dp"
+
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/poppins"
         android:text="Update Meal Plan"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:layout_marginStart="50dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mealCalories" />
+        android:textSize="16sp" />
 
 </LinearLayout>

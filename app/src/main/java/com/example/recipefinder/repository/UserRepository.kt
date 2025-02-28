@@ -28,7 +28,12 @@ interface UserRepository {
     fun logout()
 
 
+
     fun editProfile()
+    fun getUserData(userId:String, callBack:(UserModel?) ->Unit)
+
+    fun fetchUserDetails(userId: String, callBack: (Boolean, String, String) -> Unit)
+
 
 
 }

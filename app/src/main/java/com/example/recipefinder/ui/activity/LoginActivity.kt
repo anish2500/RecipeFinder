@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginBtn.setOnClickListener(){
             val intent = Intent(this@LoginActivity,
-                DashboardActivity::class.java)
+                NavigationActivity::class.java)
             startActivity(intent)
         }
 

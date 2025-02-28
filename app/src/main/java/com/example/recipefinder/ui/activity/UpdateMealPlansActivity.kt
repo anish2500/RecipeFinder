@@ -14,11 +14,8 @@ import com.example.anew.utils.LoadingUtils
 import com.example.recipefinder.R
 import com.example.recipefinder.databinding.ActivityUpdateMealPlansBinding
 import com.example.recipefinder.repository.MealPlansRepositoryImpl
-import com.example.recipefinder.repository.RecipeRepositoryImpl
 import com.example.recipefinder.utils.ImageUtils
 import com.example.recipefinder.viewModel.MealPlansViewModel
-import com.example.recipefinder.viewModel.RecipeViewModel
-import com.squareup.picasso.Picasso
 
 class UpdateMealPlansActivity : AppCompatActivity() {
 
@@ -42,9 +39,9 @@ class UpdateMealPlansActivity : AppCompatActivity() {
         val repo = MealPlansRepositoryImpl()
         mealPlansViewModel = MealPlansViewModel(repo)
 
-        val mealPlanId: String = intent.getStringExtra("mealPlanId").toString()
+        val mealPlanId: String? = intent.getStringExtra("mealPlanId")
 
-        Log.d("checkkkkkk",mealPlanId)
+        Log.d("checkkkkkk", mealPlanId ?: "null")
         // Check if the mealId is valid
         if (mealPlanId.isNullOrEmpty()) {
             Toast.makeText(this, "Invalid Meal ID", Toast.LENGTH_SHORT).show()
@@ -61,12 +58,19 @@ class UpdateMealPlansActivity : AppCompatActivity() {
                 binding.updateMealCalories.setText(meal.mealCalories ?: "")
 
                 // Load image using Glide
-                val imageUrl = meal.mealimageUrl
-                Glide.with(this)
-                    .load(if (imageUrl.isNullOrEmpty()) R.drawable.imageplaceholder else imageUrl)
-                    .into(binding.updateMealImage)
-            } else {
-                Toast.makeText(this, "Failed to load meal plan", Toast.LENGTH_SHORT).show()
+                val imageUrl = meal.mealimageUrl.takeIf { it.isNotEmpty() }?.let { convertToHttps(it) }
+
+                if (imageUrl.isNullOrEmpty()) {
+                    // Handle case if the imageUrl is null or empty (use a placeholder or skip loading)
+                    Glide.with(this)
+                        .load(R.drawable.imageplaceholder)  // Use a default image placeholder
+                        .into(binding.updateMealImage)
+                } else {
+                    // Load the actual image from the URL
+                    Glide.with(this)
+                        .load(imageUrl)
+                        .into(binding.updateMealImage)
+                }
             }
         }
 
@@ -75,10 +79,12 @@ class UpdateMealPlansActivity : AppCompatActivity() {
             imageUtils.launchGallery(this)
         }
 
-        imageUtils.registerActivity { url ->
-            url?.let {
+        imageUtils.registerActivity { uri ->
+            uri?.let {
                 imageUri = it.toString()
-                Picasso.get().load(it).into(binding.updateMealImage)
+                Glide.with(this)
+                    .load(it)
+                    .into(binding.updateMealImage)
             }
         }
 
@@ -135,5 +141,9 @@ class UpdateMealPlansActivity : AppCompatActivity() {
             }
             loadingUtils.dismiss()
         }
+    }
+
+    private fun convertToHttps(url: String): String {
+        return url.replace("http://", "https://")
     }
 }

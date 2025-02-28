@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipefinder.R
 import com.example.recipefinder.adapter.RecipeAdapter
-import com.example.recipefinder.adapter.UserAdapter
+//import com.example.recipefinder.adapter.UserAdapter
 import com.example.recipefinder.databinding.ActivityDashboardBinding
 import com.example.recipefinder.repository.RecipeRepositoryImpl
 import com.example.recipefinder.viewModel.RecipeViewModel

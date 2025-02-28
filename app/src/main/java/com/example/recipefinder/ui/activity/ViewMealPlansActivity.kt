@@ -14,6 +14,7 @@ import com.example.recipefinder.databinding.ActivityViewMealPlansBinding
 import com.example.recipefinder.repository.MealPlansRepositoryImpl
 
 import com.example.recipefinder.viewModel.MealPlansViewModel
+import com.squareup.picasso.Picasso
 
 class ViewMealPlansActivity : AppCompatActivity() {
      lateinit var binding: ActivityViewMealPlansBinding
@@ -47,6 +48,7 @@ class ViewMealPlansActivity : AppCompatActivity() {
 
                 binding.mealProtein.setText(mealPlan.mealProtein) // Assuming this is a list formatted as a String
                 binding.mealCalories.setText(mealPlan.mealCalories)
+                Picasso.get().load(mealPlan.mealimageUrl).into(binding.imageBrowse)
             } else {
                 Toast.makeText(this, "Meal Plan not found", Toast.LENGTH_SHORT).show()
             }

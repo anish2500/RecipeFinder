@@ -9,6 +9,7 @@ import com.google.firebase.database.FirebaseDatabase
 class UserRepositoryImpl: UserRepository {
     var auth: FirebaseAuth = FirebaseAuth.getInstance()
 
+
     var database : FirebaseDatabase = FirebaseDatabase.getInstance()
     var ref : DatabaseReference = database.reference.child("users")
 
@@ -70,12 +71,39 @@ class UserRepositoryImpl: UserRepository {
         return auth.currentUser // returns the current user
     }
 
+
     override fun logout() {
         TODO("Not yet implemented")
     }
 
     override fun editProfile() {
         TODO("Not yet implemented")
+    }
+
+    override fun getUserData(userId: String, callBack: (UserModel?) -> Unit) {
+        ref.child(userId).get().addOnCompleteListener { users ->
+            if(users.isSuccessful){
+                val userModel = users.result?.getValue(UserModel::class.java)
+                callBack(userModel)
+
+            }   else{
+                callBack(null)
+            }
+        }
+    }
+
+    override fun fetchUserDetails(userId: String, callBack: (Boolean, String, String) -> Unit) {
+        ref.child(userId).get().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val snapshot = task.result
+                val userModel = snapshot.getValue(UserModel::class.java)
+                userModel?.let {
+                    callBack(true, it.firstName, it.email)
+                } ?: callBack(false, "User details not found", "")
+            } else {
+                callBack(false, task.exception?.message.toString(), "")
+            }
+        }
     }
 
 

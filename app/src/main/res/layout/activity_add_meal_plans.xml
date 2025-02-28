@@ -64,6 +64,7 @@
         android:layout_width="300dp"
         android:paddingTop="5dp"
         android:paddingStart="20dp"
+        android:textColor="@color/black"
 
         android:id="@+id/mealProtein"
         android:hint="Enter Meal Proteins"/>
@@ -74,6 +75,7 @@
         android:background="@drawable/drawable_border"
         android:fontFamily="@font/poppins"
         android:layout_height="35dp"
+        android:textColor="@color/black"
         android:layout_marginBottom="10dp"
 
         android:paddingTop="5dp"

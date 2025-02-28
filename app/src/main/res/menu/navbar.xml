@@ -21,4 +21,10 @@
         android:id="@+id/mealPlans"
         android:icon="@drawable/mealplans"
         android:title="Meals" />
+
+    <item android:title="Profile"
+        android:icon="@drawable/profile"
+        android:id="@+id/profile"
+        />
+
 </menu>

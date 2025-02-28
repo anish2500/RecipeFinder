@@ -3,9 +3,13 @@ package com.example.recipefinder.viewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.recipefinder.model.UserModel
 import com.example.recipefinder.repository.UserRepository
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
 class UserViewModel(val repo : UserRepository)  {
+
+    val userFirstName = MutableLiveData<String>()
+    val userEmail = MutableLiveData<String>()
 
     fun Login(email:String, password:String,
               callBack:(Boolean,String)->Unit){
@@ -40,8 +44,20 @@ class UserViewModel(val repo : UserRepository)  {
 
     } // question mark is null label  data can be present or not
 
+    fun fetchUserDetails(userId: String, callBack: (Boolean, String, String) -> Unit) {
+        repo.fetchUserDetails(userId) { success, firstName, email ->
+            if (success) {
+                userFirstName.value = firstName
+                userEmail.value = email
+            }
+            callBack(success, firstName, email)
+        }
+    }
+
 
     fun logout(){
+        FirebaseAuth.getInstance().signOut()
+
 
     }
 
