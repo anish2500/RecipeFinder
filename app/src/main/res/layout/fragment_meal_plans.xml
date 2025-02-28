@@ -7,6 +7,9 @@
     android:background="@color/white"
     tools:context=".ui.fragment.MealPlansFragment">
 
+
+
+
     <!-- Search Bar -->
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
