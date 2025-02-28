@@ -46,7 +46,7 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/recipeDesc"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:textSize="16sp"
 
         android:maxLines="3"
@@ -65,7 +65,7 @@
         android:fontFamily="@font/poppins"
         android:layout_marginBottom="10dp"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="75dp"
         android:textSize="16sp"
 
         android:focusable="false"
@@ -85,7 +85,7 @@
         android:fontFamily="@font/poppins"
         android:layout_marginBottom="20dp"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="105dp"
         android:textSize="16sp"
 
         android:focusable="false"

@@ -47,7 +47,7 @@
     <EditText
         android:id="@+id/updateRecipeDesc"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:textColor="@color/gray"
         android:background="@drawable/drawable_border"
         android:textColorHint="@color/darkgreen"
@@ -60,7 +60,7 @@
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="75dp"
         android:textColor="@color/gray"
         android:background="@drawable/drawable_border"
         android:textColorHint="@color/darkgreen"
@@ -70,12 +70,12 @@
         android:paddingTop="5dp"
         android:layout_marginBottom="10dp"
         android:id="@+id/updateRecipeIngredients"
-        android:hint="Enter Recipe Ingredients"
+        android:hint="Update Recipe Ingredients"
         />
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="105dp"
         android:textColor="@color/gray"
         android:background="@drawable/drawable_border"
         android:textColorHint="@color/darkgreen"
@@ -85,7 +85,7 @@
         android:paddingTop="5dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/updateRecipeSteps"
-        android:hint="Enter Recipe Steps"/>
+        android:hint="Update Recipe Steps"/>
 
     <Button
         android:id="@+id/updateBtn"
